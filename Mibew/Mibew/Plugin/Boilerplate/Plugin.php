@@ -50,7 +50,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
      * Plugin's constructor.
      *
      * The code is situated here can initialize the plugin but cannot depend
-     * on other plugins. All dependent code shuold be placed in "run" method.
+     * on other plugins. All dependent code should be placed in "run" method.
      *
      * The current implementation just checks plugin's configurations.
      *
