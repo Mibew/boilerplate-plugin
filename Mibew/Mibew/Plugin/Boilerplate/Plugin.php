@@ -89,6 +89,11 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
     /**
      * Just attaches custom CSS file to every page that support it (chat windows
      * and users waiting screen).
+     *
+     * @param array $args Associative array of arguments passed in to event
+     * handler. The list of arguments can vary for different events. See an
+     * event description to know which arguments are available and how they
+     * should be used.
      */
     public function addCustomCss(&$args)
     {
