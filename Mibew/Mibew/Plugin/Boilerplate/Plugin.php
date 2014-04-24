@@ -12,7 +12,9 @@
  * <code>
  * $plugins_list[] = array(
  *     'name' => 'Mibew:Boilerplate',
- *     'config' => array();
+ *     'config' => array(
+ *         'very_important_value' => '$3.50',
+ *     );
  * );
  * </code>
  */
@@ -31,11 +33,41 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
     /**
      * Determine if the plugin was initialized correctly or not.
      *
-     * By setting this propery to true by default we make the plugin
+     * By setting this propery to true by default we can make the plugin
      * initialized by default, so there is no need to add custom contructor
      * or initializer.
+     *
+     * This propery is overridden here only for example. We do not need to do
+     * so in each plugin. In general case it should be set to true in the plugin
+     * constructor when all necessary checks will be passed.
+     *
+     * Another way to control initialization state of the plugin is by means of
+     * {@link \Mibew\Plugin\PluginInterface::initialized()} method.
      */
     protected $initialized = true;
+
+    /**
+     * Plugin's constructor.
+     *
+     * The code is situated here can initialize the plugin but cannot depend
+     * on other plugins. All dependent code shuold be placed in "run" method.
+     *
+     * The current implementation just checks plugin's configurations.
+     *
+     * @param array $config Associative array of configuration params from the
+     * main config file.
+     */
+    public function __construct($config)
+    {
+        // Check if a fake config param is set or it does not. In the sake of
+        // simplicity we do not check the value.
+        if (!isset($config['very_important_value'])) {
+            // "very_important_value" param was not set. In this case we cannot
+            // initialize the plugin correctly, so we need to tell the system
+            // about it.
+            $this->initialized = false;
+        }
+    }
 
     /**
      * The main entry point of a plugin
