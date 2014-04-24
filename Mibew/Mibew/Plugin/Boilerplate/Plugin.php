@@ -75,7 +75,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
      * If a plugin extends \Mibew\Plugin\AbstructPlugin class the only method
      * that should be implemented is "run".
      *
-     * Here we can attache event listeners and do other job.
+     * Here we can attach event listeners and do other job.
      */
     public function run()
     {
@@ -101,7 +101,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
     }
 
     /**
-     * Also we can add dependencies. But make shure that they was loaded BEFORE
+     * Also we can add dependencies. But make sure that they were loaded BEFORE
      * current plugin in config.php
      *
      * If the plugin depends, for example, on "Abc:BestFeature" and "Xyz:Logger"
