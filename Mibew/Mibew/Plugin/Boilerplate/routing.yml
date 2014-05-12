@@ -1,0 +1,11 @@
+# Here we can easily define custom routes. Let's create a "Hello world!" page.
+mibew_boilerplate_hello:
+    # Relative path from the Mibew web root is used here.
+    path: /mibew-boilerplate-hello/{name}
+    # Set some defaults for the request
+    defaults:
+        # This value is special. It tells the system what action should be
+        # invoked for the response
+        _controller: Mibew\Mibew\Plugin\Boilerplate\Controller\HelloWorldController::indexAction
+        # Set a default value for the "{name}" placeholder
+        name: world
