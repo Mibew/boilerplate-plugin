@@ -17,3 +17,7 @@ $plugins_list[] = array(
 );
 ```
 5. Done
+
+## License
+
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
