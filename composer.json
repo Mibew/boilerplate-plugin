@@ -4,5 +4,6 @@
     "license": "Apache-2.0",
     "autoload": {
         "psr-0": {"Mibew\\Mibew\\Plugin\\Boilerplate\\": ""}
-    }
+    },
+    "target-dir": "Mibew/Mibew/Plugin/Boilerplate"
 }
