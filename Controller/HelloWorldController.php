@@ -27,10 +27,10 @@ use Symfony\Component\HttpFoundation\Response;
 class HelloWorldController extends AbstractController
 {
     /**
-     * Generate content for "mibew_boilerplate_hello" route.
+     * Displays a simple "Hello world" message.
      *
-     * @param Request $request
-     * @return Response
+     * @param Request $request Incoming request.
+     * @return Response Rendered page content.
      */
     public function indexAction(Request $request)
     {
