@@ -16,7 +16,6 @@ $plugins_list[] = array(
     ),
 );
 ```
-5. Done
 
 ## License
 
