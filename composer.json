@@ -2,6 +2,12 @@
     "name": "mibew/boilerplate-plugin",
     "description": "An example plugin for Mibew 2.0.",
     "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Dmitriy Simushev",
+            "email": "simushevds@mibew.org"
+        }
+    ],
     "autoload": {
         "psr-0": {"Mibew\\Mibew\\Plugin\\Boilerplate\\": ""}
     },
