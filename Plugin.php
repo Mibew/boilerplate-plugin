@@ -24,14 +24,19 @@
  * "<mibew root>/plugins/<Vendor Name>/Mibew/Plugin/<Plugin name>/Plugin.php"
  * file. Names of plugin and directories/files are case sensitive!
  *
- * To turn the plugin on add the following to <mibew root>/libs/config.php
+ * To turn the plugin on add its definition to the following to "plugins"
+ * structure in <mibew root>/configs/config.yml if the "plugins" structure looks
+ * like:
  * <code>
- * $plugins_list[] = array(
- *     'name' => 'Mibew:Boilerplate',
- *     'config' => array(
- *         'very_important_value' => '$3.50',
- *     );
- * );
+ * plugins: []
+ * </code>
+ * it will become:
+ * <code>
+ * plugins:
+ *     -
+ *         name: "Mibew:Boilerplate"
+ *         config:
+ *             very_important_value: "$3.50"
  * </code>
  */
 
