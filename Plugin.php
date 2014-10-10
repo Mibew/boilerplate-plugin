@@ -118,8 +118,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
      */
     public function addCustomCss(&$args)
     {
-        $args['css'][] = $args['request']->getBasePath()
-            . '/' . $this->getFilesPath() . '/css/styles.css';
+        $args['css'][] = $this->getFilesPath() . '/css/styles.css';
     }
 
     /**
