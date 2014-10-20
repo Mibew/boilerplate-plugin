@@ -43,6 +43,7 @@
 namespace Mibew\Mibew\Plugin\Boilerplate;
 
 use Mibew\EventDispatcher\EventDispatcher;
+use Mibew\EventDispatcher\Events;
 
 /**
  * Defenition of the main plugin class.
@@ -106,7 +107,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
         // events. So get it.
         $dispatcher = EventDispatcher::getInstance();
         // There are a lot of events. Use a few of them to show how they work.
-        $dispatcher->attachListener('pageAddCSS', $this, 'addCustomCss');
+        $dispatcher->attachListener(Events::PAGE_ADD_CSS, $this, 'addCustomCss');
     }
 
     /**
