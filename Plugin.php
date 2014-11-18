@@ -51,6 +51,9 @@ use Mibew\EventDispatcher\Events;
  * Plugin class must implements \Mibew\Plugin\PluginInterface and can extends
  * \Mibew\Plugin\AbstractPlugin class. The latter contains basic functions that
  * can be helpfull.
+ *
+ * If the plugin extends \Mibew\Plugin\AbstractPlugin class it must implement
+ * only "run" and "getVersion" methods.
  */
 class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\PluginInterface
 {
@@ -96,9 +99,6 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
     /**
      * The main entry point of a plugin
      *
-     * If a plugin extends \Mibew\Plugin\AbstructPlugin class the only method
-     * that should be implemented is "run".
-     *
      * Here we can attach event listeners and do other job.
      */
     public function run()
@@ -125,6 +125,23 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
     }
 
     /**
+     * Returns verision of the plugin.
+     *
+     * The version can be any string compatible with semantic version
+     * convention (see {@link http://semver.org/}). For example one can use the
+     * following versions:
+     *  - "1.2.3"
+     *  - "0.1.7-alpha.2"
+     *  - "4.0.0-beta.4"
+     *
+     * @return string Plugin's version.
+     */
+    public static function getVersion()
+    {
+        return '0.1.0';
+    }
+
+    /**
      * Also we can add dependencies. But make sure that they were loaded BEFORE
      * current plugin in config.php
      *
@@ -132,8 +149,8 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
      * we need to return the following array:
      * <code>
      * return array(
-     *     'Abc:BestFeature',
-     *     'Xyz:Logger',
+     *     'Abc:BestFeature' => '0.2.1',
+     *     'Xyz:Logger' => '3.1.4',
      * );
      * </code>
      */
