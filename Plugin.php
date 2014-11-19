@@ -22,7 +22,15 @@
  * conventions. The name of the main plugin class should match pattern:
  * "\<Vendor Name>\Mibew\Plugin\<Plugin name>\Plugin". It should be placed in
  * "<mibew root>/plugins/<Vendor Name>/Mibew/Plugin/<Plugin name>/Plugin.php"
- * file. Names of plugin and directories/files are case sensitive!
+ * file. Names of vendor, plugin and directories/files are case sensitive!
+ *
+ * Notice that vendor and plugin names can contains only numbers and latin
+ * letters and must start with a capitalized letter.
+ *
+ * Here are examples of good plugins names:
+ *  - Abc:Xyz
+ *  - Foo12:Bar
+ *  - Acme:TheBestPlugin
  *
  * To turn the plugin on add its definition to the following to "plugins"
  * structure in <mibew root>/configs/config.yml if the "plugins" structure looks
