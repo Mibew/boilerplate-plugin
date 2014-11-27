@@ -32,8 +32,8 @@
  *  - Foo12:Bar
  *  - Acme:TheBestPlugin
  *
- * To turn the plugin on add its definition to the following to "plugins"
- * structure in <mibew root>/configs/config.yml if the "plugins" structure looks
+ * To configure the plugin add its configs to the "plugins" structure in
+ * "<mibew root>/configs/config.yml" file. If the "plugins" structure looks
  * like:
  * <code>
  * plugins: []
@@ -41,11 +41,12 @@
  * it will become:
  * <code>
  * plugins:
- *     -
- *         name: "Mibew:Boilerplate"
- *         config:
- *             very_important_value: "$3.50"
+ *     "Mibew:Boilerplate":
+ *         very_important_value: "$3.50"
  * </code>
+ *
+ * To turn the plugin on navigate to "<Mibew Base URL>/operator/plugin" page and
+ * enable the plugin.
  */
 
 namespace Mibew\Mibew\Plugin\Boilerplate;
